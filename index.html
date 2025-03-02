@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .font-poppins{
+            font-family: "Poppins", sans-serif;
+        }
+        
+        </style>
+</head>
+<body class="bg-slate-100">
+    <header>
+        <nav class="bg-white mx-16 rounded-2xl mt-3 py-5 drop-shadow-lg">
+            <div class="flex justify-between ">
+            <div class="flex items-center ml-5">
+                <img src="assets/logo.png" alt="">
+                <h1 class="text-4xl ml-3 text-[#00303C]">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div class="flex items-center gap-6 mr-5">
+            <div class="flex items-center bg-white px-3 py-2 rounded-3xl">
+            <img src="assets/checkbox.png" alt="">
+            <h1 id="nav-btn" class="text-2xl font-bold ml-3">22</h1>
+            </div>
+            <div class="cursor-pointer">
+                <img id="color-btn" src="assets/theme-btn.png" alt="">
+            </div>
+        </div>
+        </div>
+        </nav>
+
+        <section class="flex mb-10">
+            <div class="bg-white mx-16 rounded-2xl mt-6 w-4/6 ">
+                <div  class="p-5">
+                    <div class="flex gap-5  ml-3">
+                    <div class="bg-slate-100 w-52 flex gap-3 h-24 rounded-xl">
+                        <div class="w-12 h-12  ml-3 bg-white p-3 rounded-full mt-5 bg-r">
+                        <img src="assets/checkbox.png" alt="">
+                        </div>
+                        <div class="mt-5">   
+                        <h4 class="text-base font-medium text-[#00303C]">Task Assigned</h4>
+                        <h1 id="task-count" class="text-[#00303C] font-bold text-2xl">06</h1>
+                    </div>
+                    </div>
+                    <div class="flex bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-96 rounded-xl">
+                        <img class="w-16 h-16 ml-4 mt-4" src="assets/board.png" alt="">
+                            <h3 id="second-page" class="mt-5 ml-2 text-xl text-[#FFFFFF] font-semibold cursor-pointer">Discover Something<br>New Today!</h3>
+                    </div>
+                    <div class="bg-slate-100 w-52 flex gap-3 h-24 rounded-xl">
+                        <div class="w-12 h-12  ml-3 bg-white p-3 rounded-full mt-5">
+                        <img src="assets/calender.png" alt="">
+                        </div>
+                        <div class="mt-5">   
+                        <h4 id="date-display" class="text-lg font-semibold"> </h4>
+                    </div>
+                    </div>
+                </div>  
+                
+                <div class="mt-10 grid grid-cols-3 gap-5 ">
+                    <div class="bg-slate-100 rounded-lg">
+                    <div class="ml-5">
+                        <button class="text-base font-medium text-[#00303C] bg-white px-3 py-1 rounded-lg mt-5">ShopEase</button>
+                    </div>
+                    <h1 class="ml-5 text-xl font-medium text-[#00303C] mt-2">Fix Mobile Button Issue </h1>
+                    <p class="ml-5 mt-3 text-sm font-medium text-[#696767] bg-white w-56 p-3 rounded-lg  ">Debug using Chrome DevTools, check for overlapping...</p>
+                    <div class="flex gap-3 ">
+                        <div>
+                        <h5 class="text-sm font-medium text-[#696767] ml-5 mt-2 ">Deadline</h5>
+                        <h3 class="text-base font-medium ml-5 mb-5">21 March 2025</h3>
+                    </div>
+                    <button id="completed-btn-1" class="completed text-base font-medium bg-[#3752FD] text-[#FFFFFF] mt-4 px-3 py-1 rounded-lg mb-5">Completed</button>
+                    </div>
+                </div>
+                    <div class="bg-slate-100 rounded-lg ">
+                    <div class="ml-5">
+                        <button class="text-base font-medium text-[#00303C] bg-white px-3 py-1 rounded-lg mt-5">CloudSync</button>
+                    </div>
+                    <h1 class="ml-5 text-xl font-medium text-[#00303C] mt-2">Add Dark Mode </h1>
+                    <p class="ml-5 mt-3 text-sm font-medium text-[#696767] bg-white w-56 p-3 rounded-lg  ">Store the user's preference in localStorage, update CSS...</p>
+                    <div class="flex gap-3 ">
+                        <div>
+                        <h5 class="text-sm font-medium text-[#696767] ml-5 mt-2 ">Deadline</h5>
+                        <h3 class="text-base font-medium ml-5 mb-5">21 March 2025</h3>
+                    </div>
+                    <button  id="completed-btn-2" class="completed text-base font-medium bg-[#3752FD] text-[#FFFFFF] mt-4 px-3 py-1 rounded-lg mb-5">Completed</button>
+                    </div>
+                </div>
+                    <div class="bg-slate-100 rounded-lg ">
+                    <div class="ml-5">
+                        <button class="text-base font-medium text-[#00303C] bg-white px-3 py-1 rounded-lg mt-5">SwiftPay</button>
+                    </div>
+                    <h1 class="ml-5 text-xl font-medium text-[#00303C] mt-2">Optimize  Home page</h1>
+                    <p class="ml-5 mt-3 text-sm font-medium text-[#696767] bg-white w-56 p-3 rounded-lg  ">Debug using Chrome DevTools,<br> check for overlapping...</p>
+                    <div class="flex gap-3 ">
+                        <div>
+                        <h5 class="text-sm font-medium text-[#696767] ml-5 mt-2 ">Deadline</h5>
+                        <h3 class="text-base font-medium ml-5 mb-5">21 March 2025</h3>
+                    </div>
+                    <button id="completed-btn-3" class="completed text-base font-medium bg-[#3752FD] text-[#FFFFFF] mt-4 px-3 py-1 rounded-lg mb-5">Completed</button>
+                    </div>
+                </div>
+                    <div class="bg-slate-100 rounded-lg">
+                    <div class="ml-5">
+                        <button class="text-base font-medium text-[#00303C] bg-white px-3 py-1 rounded-lg mt-5">Meta</button>
+                    </div>
+                    <h1 class="ml-5 text-xl font-medium text-[#00303C] mt-2">Add new emoji 🤲 </h1>
+                    <p class="ml-5 mt-3 text-sm font-medium text-[#696767] bg-white w-56 p-3 rounded-lg  ">Debug using Chrome DevTools, check for overlapping...</p>
+                    <div class="flex gap-3 ">
+                        <div>
+                        <h5 class="text-sm font-medium text-[#696767] ml-5 mt-2 ">Deadline</h5>
+                        <h3 class="text-base font-medium ml-5 mb-5">21 March 2025</h3>
+                    </div>
+                    <button id="completed-btn-4" class="completed text-base font-medium bg-[#3752FD] text-[#FFFFFF] mt-4 px-3 py-1 rounded-lg mb-5">Completed</button>
+                    </div>
+                </div>
+                    <div class="bg-slate-100 rounded-lg ">
+                    <div class="ml-5">
+                        <button class="text-base font-medium text-[#00303C] bg-white px-3 py-1 rounded-lg mt-5">Google LLC</button>
+                    </div>
+                    <h1 class="ml-5 text-xl font-medium text-[#00303C] mt-2">Integrate OpenAI API </h1>
+                    <p class="ml-5 mt-3 text-sm font-medium text-[#696767] bg-white w-56 p-3 rounded-lg  ">Store the user's preference in localStorage, update CSS...</p>
+                    <div class="flex gap-3 ">
+                        <div>
+                        <h5 class="text-sm font-medium text-[#696767] ml-5 mt-2 ">Deadline</h5>
+                        <h3 class="text-base font-medium ml-5 mb-5">21 March 2025</h3>
+                    </div>
+                    <button id="completed-btn-5" class="completed text-base font-medium bg-[#3752FD] text-[#FFFFFF] mt-4 px-3 py-1 rounded-lg mb-5">Completed</button>
+                    </div>
+                </div>
+                    <div class="bg-slate-100 rounded-lg ">
+                    <div class="ml-5">
+                        <button class="text-base font-medium text-[#00303C] bg-white px-3 py-1 rounded-lg mt-5">Glassdoar</button>
+                    </div>
+                    <h1 class="ml-5 text-xl font-medium text-[#00303C] mt-2">Improve Job searching </h1>
+                    <p class="ml-5 mt-3 text-sm font-medium text-[#696767] bg-white w-56 p-3 rounded-lg  ">Debug using Chrome DevTools,<br> check for overlapping...</p>
+                    <div class="flex gap-3 ">
+                        <div>
+                        <h5 class="text-sm font-medium text-[#696767] ml-5 mt-2 ">Deadline</h5>
+                        <h3 class="text-base font-medium ml-5 mb-5">21 March 2025</h3>
+                    </div>
+                    <button id="completed-btn-6" class="completed text-base font-medium bg-[#3752FD] text-[#FFFFFF] mt-4 px-3 py-1 rounded-lg mb-5">Completed</button>
+                    </div>
+                </div>
+
+                </div>
+
+
+            </div>
+            </div>
+            <div id="history-container" class="bg-white mt-6 -ml-10 w-72 rounded-xl">
+                    <div class="flex gap-3 justify-center items-center mt-5">
+                        <img src="assets/activity.png" alt="">
+                        <h3 class="text-xl font-semibold text-[#00303C]">Activity Log</h3>
+                    </div>
+                    <div class="mt-5">
+                        <button id="history-btn" class="text-base font-medium bg-[#3752FD] ml-20 text-[#FFFFFF] px-5 py-2 rounded-lg">Clear History</button>
+                    </div>
+                    <hr class="mt-5">
+                    </div>
+                    </div>
+        </section>
+    </header>
+
+<script src="js/main.js"></script>
+<script src="js/history.js"></script>
+<script src="js/exchange1.js"></script>
+<script src="js/exchange2.js"></script>
+</body>
+</html>
